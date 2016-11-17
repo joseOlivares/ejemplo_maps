@@ -5,7 +5,7 @@ var io = require('socket.io')(http);
 
 app.use(express.static(__dirname + '/public')); //serving statics files like css, js, images
 
-var port=process.env.PORT || 3000; //this is for heroku
+var port=process.env.PORT || 3000; //this is for heroku enviroment
 
 
 app.get('/', function(req, res){
