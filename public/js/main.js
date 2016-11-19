@@ -100,6 +100,7 @@ var app={
     inicializar: function() {
 		"use strict";
 		var self=this;
+		self.listenSocket(); //Conectando al server con SocketIo
         self.cargarMapa(); //llamando metodo que carga el mapa
 	}
 
