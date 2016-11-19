@@ -1,4 +1,4 @@
-var express= require('express');
+ var express= require('express');
 var app = express();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
@@ -27,7 +27,7 @@ io.on('connection', function(socket){
 	console.log('Usuario Conectado...');
 	//console.log(socket);
     socketCount++;// Socket has connected, increase socket count
-	io.sockets.emit('usuario conectado', socketCount);    // Let all sockets know how many are connected
+	io.sockets.emit('usuario conectado', socketCount +'Hola');    // Let all sockets know how many are connected
 }); //cierra on connection
 
 /*
