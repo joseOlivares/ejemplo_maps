@@ -28,6 +28,11 @@ io.on('connection', function(socket){
 	//console.log(socket);
     socketCount++;// Socket has connected, increase socket count
 	io.sockets.emit('usuario conectado', socketCount);    // Let all sockets know how many are connected
-
-
 }); //cierra on connection
+
+
+    socket.on('disconnect', function () {
+        socketCount--; // Decrease the socket count on a disconnect	
+        io.sockets.emit('Usuario Conectado', socketCount);    // Let all sockets know how many are connected
+        console.log('usuario desconectado');
+    });
