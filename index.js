@@ -33,6 +33,6 @@ io.on('connection', function(socket){
 
     socket.on('disconnect', function () {
         socketCount--; // Decrease the socket count on a disconnect	
-        io.sockets.emit('Usuario Conectado', socketCount);    // Let all sockets know how many are connected
+        io.sockets.emit('usuario conectado', socketCount);    // Let all sockets know how many are connected
         console.log('usuario desconectado');
     });
